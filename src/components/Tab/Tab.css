@@ -1,0 +1,30 @@
+.tab-content {
+    padding: 16px 8px;
+    margin-right: 16px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #586069;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+}
+
+.tab-content:hover {
+    color: #24292e;
+    text-decoration: none;
+    border-bottom-color: #d1d5da;
+    transition: 0.2s ease;
+    border-bottom: 1px solid #cac1c1;
+    cursor: pointer;
+}
+
+/* .tab-selected {
+    font-weight: 600;
+    color: #24292e;
+    border-bottom-color: #e36209;
+}
+
+.tab-unselected {
+    font-weight: 100;
+    color: #586069;
+    border-bottom-color: '';
+} */
