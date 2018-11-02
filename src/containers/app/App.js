@@ -7,7 +7,6 @@ import Tab from '../../components/Tab/Tab';
 import Filters from '../../components/Filters/Filters';
 import Repository from '../../components/Repository/Repository';
 
-
 import './App.css';
 
 const tabs = ['Overview', 'Repositories', 'Starts', 'Followers', 'Following'];
@@ -37,7 +36,7 @@ class App extends Component {
 	}
 
 	searchRepo = value => {
-		this.props.searchRepos(value).then(res=> {
+		this.props.searchRepos(value).then(() => {
 			let {userInformation} = this.state;
 			let newUserInformation = {
 				userInfo: userInformation.userInfo,
@@ -63,7 +62,7 @@ class App extends Component {
 						</div>
 						<Filters searchRepo={this.searchRepo} />
 						<ul className="user-repositories">
-							{this.state.userInformation.userRepos.map((repo, index) => <Repository key={index} repository={repo} />)}
+							{this.state.userInformation.filterRepos.map((repo, index) => <Repository key={index} repository={repo} />)}
 						</ul>
 					</div>
 				</div>

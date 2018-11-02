@@ -9,12 +9,12 @@ export default (state = { userInfo: {}, userRepos: [], filterRepos: [] }, action
             return {
                 ...state,
                 userRepos: action.userRepos,
+                filterRepos: action.userRepos,
             };
-        case 'SEARCH': {
+        case 'SEARCH':
                 const {value} = action;
-                const filterRepos = state.userRepos.filter(val => val.name.includes(value));
-                return {...state, value, filterRepos};
-              }
+                const filterRepos = state.userRepos.filter(val => val.name.toLowerCase().includes(value.toLowerCase()));
+                return {...state, filterRepos};
         default:
             return state;
     }

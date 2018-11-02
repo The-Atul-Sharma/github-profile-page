@@ -1,12 +1,5 @@
 import api from '../services/api';
 
-export const searchRepos = value => {
-    return {
-        type: 'SEARCH', 
-        value,
-    }
-}
-
 export function userInformation(userInfo) {
     return {
         type: 'USER_INFROMATION',
@@ -19,6 +12,14 @@ export function userRepos(userRepos) {
         type: 'USER_REPOS',
         userRepos,
     };
+}
+
+export const searchRepos = value => dispatch => {
+    dispatch({
+        type: 'SEARCH', 
+        value,
+    })
+    return Promise.resolve();
 }
 
 export const getUserInformation = username => dispatch =>
