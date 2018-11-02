@@ -1,7 +1,7 @@
 .repository-section {
     border-bottom: 1px #e1e4e8 solid;
     padding-top: 8px;
-    padding-bottom: 16px;
+    padding-bottom: 24px;
 }
 
 .repository-info {
@@ -17,4 +17,13 @@
 .repository-info>span>svg {
     float: left;
     margin-right: 5px;
+}
+
+.repository-fork_url {
+    font-size: 9pt;
+}
+
+.repository-description {
+    color: #586069;
+    font-size: 14px;
 }

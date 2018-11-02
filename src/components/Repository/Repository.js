@@ -8,6 +8,10 @@ export default class Repository extends Component {
                 <h3>
                     <a href={this.props.repository.html_url} rel="noopener noreferrer" target="_blank">{this.props.repository.name}</a>
                 </h3>
+                {this.props.repository.fork && <span className="repository-fork_url"> Forked from
+                    <a href={this.props.repository.forks_url} rel="noopener noreferrer" target="_blank"> {this.props.repository.forks_url}</a>
+                </span>}
+                <p className="repository-description">{this.props.repository.description}</p>
                 <div className="repository-info">
                     {this.props.repository.language && <span>
                         {this.props.repository.language}
