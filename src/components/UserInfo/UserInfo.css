@@ -45,6 +45,12 @@
     margin-right: 5px;
 }
 
+@media only screen and (max-width: 900px) {
+    .user-info {
+        width: 40%;
+    }
+}
+
 @media only screen and (max-width: 320px) {
     .user-info {
         width: 100%;
