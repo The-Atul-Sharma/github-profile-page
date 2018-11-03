@@ -62,10 +62,6 @@ export default class Filters extends Component {
                         New
                     </button>
                 </div>
-                <div className="filterPopup">
-                    
-                    
-                </div>
             </div>
         )
     }

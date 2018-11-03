@@ -44,6 +44,7 @@
     float: left;
     margin-right: 5px;
 }
+
 @media only screen and (max-width: 320px) {
     .user-info {
         width: 100%;
