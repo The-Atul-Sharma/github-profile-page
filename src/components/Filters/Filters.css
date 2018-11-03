@@ -1,57 +1,61 @@
 .filters {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    border-bottom: 1px #e1e4e8 solid;
-} 
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	border-bottom: 1px #e1e4e8 solid;
+}
 
 .filters>input {
-    width: 50%;
-    padding: 6px 8px;
-    font-size: 16px;
-    line-height: 20px;
-    color: #24292e;
-    background-color: #fff;
-    border: 1px solid #d1d5da;
-    border-radius: 3px;
-    outline: none;
-    box-shadow: inset 0 1px 2px rgba(27,31,35,0.075);
+	width: 50%;
+	padding: 6px 8px;
+	font-size: 16px;
+	line-height: 20px;
+	color: #24292e;
+	background-color: #fff;
+	border: 1px solid #d1d5da;
+	border-radius: 3px;
+	outline: none;
+	box-shadow: inset 0 1px 2px rgba(27, 31, 35, 0.075);
 }
 
 .filters>input:focus {
-    border-color: #2188ff;
-    outline: none;
-    box-shadow: inset 0 1px 2px rgba(27,31,35,0.075), 0 0 0 0.2em rgba(3,102,214,0.3);
+	border-color: #2188ff;
+	outline: none;
+	box-shadow: inset 0 1px 2px rgba(27, 31, 35, 0.075), 0 0 0 0.2em rgba(3, 102, 214, 0.3);
 }
 
 .filters-button::after {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    vertical-align: -2px;
-    content: "";
-    border: 4px solid;
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    border-left-color: transparent;
+	display: inline-block;
+	width: 0;
+	height: 0;
+	vertical-align: -2px;
+	content: "";
+	border: 4px solid;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+	border-left-color: transparent;
 }
 
 .filters>button>i {
-    font-style: normal;
-    font-weight: 500;
-    opacity: .75;
+	font-style: normal;
+	font-weight: 500;
+	opacity: .75;
 }
 
 .filters>button>span::after {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    vertical-align: -2px;
-    content: "";
-    border: 4px solid transparent;
-    border-top-color: currentcolor;
+	display: inline-block;
+	width: 0;
+	height: 0;
+	vertical-align: -2px;
+	content: "";
+	border: 4px solid transparent;
+	border-top-color: currentcolor;
+}
+
+.filterPopup {
+	display: flex;
 }
 
 /* .filters>button {

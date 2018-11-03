@@ -14,10 +14,21 @@ export function userRepos(userRepos) {
     };
 }
 
-export const searchRepos = value => dispatch => {
+export const searchRepos = searchValue => dispatch => {
     dispatch({
         type: 'SEARCH', 
-        value,
+        searchValue,
+    })
+    return Promise.resolve();
+}
+
+export const filterRepos = (filterType, value) => dispatch => {
+    dispatch({
+        type: 'FILTER', 
+        filterInfo: {
+            type: filterType,
+            value: value,
+        }
     })
     return Promise.resolve();
 }

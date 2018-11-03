@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getUserInformation, getUserRepos, searchRepos } from '../../actions/userActions';
+import { getUserInformation, getUserRepos, searchRepos, filterRepos } from '../../actions/userActions';
 import Header from '../../components/Header/Header';
 import UserInfo from '../../components/UserInfo/UserInfo';
 import Tab from '../../components/Tab/Tab';
@@ -50,6 +50,10 @@ class App extends Component {
 		});
 	}
 
+	filterRepos = (filterType, filterInfo) => {
+		this.props.filterRepos(filterType, filterInfo);
+	}
+
   	render() {
 		return (
 			<div>
@@ -60,7 +64,7 @@ class App extends Component {
 						<div className="tab">
 							{tabs.map((tab, index) => <Tab key={index} tabContent={tab} />)}
 						</div>
-						<Filters searchRepo={this.searchRepo} />
+						<Filters searchRepo={this.searchRepo} filterRepos={this.filterRepos} />
 						<ul className="user-repositories">
 							{this.state.userInformation.filterRepos.map((repo, index) => <Repository key={index} repository={repo} />)}
 						</ul>
@@ -79,5 +83,5 @@ const mapStateToProps = (state) => {
 
 export default connect(
     mapStateToProps,
-    { getUserInformation, getUserRepos, searchRepos }
+    { getUserInformation, getUserRepos, searchRepos, filterRepos }
 )(App);
