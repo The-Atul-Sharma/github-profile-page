@@ -5,14 +5,14 @@ export default class UserInfo extends Component {
   	render() {
 		return (
 			<div className="user-info">
-				<div>
+				<div className="user-name">
 					<img src={this.props.userInfo.avatar_url} width="230" height="230" alt="user_image" />
 					<h2>
 						<span className="user-fullname">{this.props.userInfo.name}</span>
 						<span className="user-username">{this.props.userInfo.login}</span>
 					</h2>
 				</div>
-				<div className="user-bio">
+				<div className="user-bio user-name">
 					<p>{this.props.userInfo.bio}</p>
 					<button className="button" type="button"> Edit bio</button>
 				</div>

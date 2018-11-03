@@ -57,6 +57,19 @@
 .filterPopup {
 	display: flex;
 }
+@media only screen and (max-width: 768px) {
+    .filters>input {
+        width: 40%;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .filters {
+        flex-direction: column;
+	}
+	.filters>input {
+        width: 100%;
+    }
+}
 
 /* .filters>button {
     width: 50px;

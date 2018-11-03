@@ -55,3 +55,27 @@ ul {
     display: flex;
     flex-direction: column;
 }
+@media only screen and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+    .repositories-section {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .container {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+    }
+    .tab {
+        overflow-x: scroll;
+    }
+    .button {
+        width: 100%;
+        margin: 3px auto;
+    }
+}

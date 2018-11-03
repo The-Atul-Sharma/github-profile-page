@@ -23,6 +23,14 @@ export default class Filters extends Component {
         });
     }
 
+    filterSet(filterType,filterInfo) {
+        this.props.filterRepos(filterType, filterInfo);
+        this.setState({
+            filterLangOpen: false,
+            filterTypeOpen: false
+        });
+    }
+
     render() {
         return (
             <div>
@@ -36,7 +44,7 @@ export default class Filters extends Component {
                         <Popup 
                             filterItem={filterType}
                             filterToggle={this.state.filterTypeOpen}
-                            handleClick={filterInfo => this.props.filterRepos('REPO_TYPE', filterInfo)}
+                            handleClick={(filterInfo) => { this.filterSet('REPO_TYPE', filterInfo); }}
                         />
                     </div>
                     <div>
@@ -47,7 +55,7 @@ export default class Filters extends Component {
                         <Popup 
                             filterItem={filterLanguage}
                             filterToggle={this.state.filterLangOpen}
-                            handleClick={filterInfo => this.props.filterRepos('LANGUAGE_TYPE', filterInfo)}
+                            handleClick={(filterInfo) => { this.filterSet('LANGUAGE_TYPE', filterInfo); }}
                         />
                     </div>
                     <button className="button">

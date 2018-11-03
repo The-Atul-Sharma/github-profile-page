@@ -44,3 +44,12 @@
     float: left;
     margin-right: 5px;
 }
+@media only screen and (max-width: 320px) {
+    .user-info {
+        width: 100%;
+        margin-right: 0;
+    }
+    .user-name {
+        text-align: center;
+    }
+}
